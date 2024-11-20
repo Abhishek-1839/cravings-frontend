@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import signingimage from "../images/signing.png";
 import "./Userauth.css";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Footeropy from "./Footeropy";
 
 const Userauth = () => {
