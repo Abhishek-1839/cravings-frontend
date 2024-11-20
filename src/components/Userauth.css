@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&display=swap');
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fullbody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainpart {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 2%;
+    text-align: left;
+   
+}
+.flana{
+    margin-left: -25px;
+}
+.headings{
+    width: 100%; /* Ensure full width */
+    /* text-align:center; 
+    align-self:center; */
+    margin: 10px 0; 
+    }
+.rightside {
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    height: 100%;
+    width: 45%;
+    padding-right: 2%;
+}
+
+.signimage {
+  padding-top: 15px;
+    max-width: 100%;
+    height: 100%; 
+    margin-right: 0; 
+    width: 100%;
+}
+
+.Signinform {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.emailbox, 
+.passwordbox {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.emailinput, 
+.passwordinput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submitbutton {
+    width: 100%;
+    padding: 10px;
+    background-color: #FC8A06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgottext {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 0px;
+    height: 20vh;
+}
+
+/* 
+@media (max-width: 1200px) {
+    .leftside {
+        width: 50%;
+        padding: 0 3%;
+    }
+    
+    .rightside {
+        width: 50%;
+        padding-right: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainpart {
+        flex-direction: column;
+    }
+    
+    .leftside, 
+    .rightside {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .signimage {
+        max-height: 300px;
+    }
+} */
