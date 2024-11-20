@@ -55,7 +55,7 @@ const Userauth = () => {
                   style={{ borderRadius: "22px" }}
                 />
                 {errors.email && (
-                  <p className="emailerror">{errors.email.message}</p>
+                  <p className="emailerror" style={{margin:"0px", color:"red"}}>{errors.email.message}</p>
                 )}
               </div>
 
@@ -78,7 +78,7 @@ const Userauth = () => {
                   style={{ borderRadius: "22px" }}
                 />
                 {errors.password && (
-                  <p className="passworderror">{errors.password.message}</p>
+                  <p className="passworderror" style={{margin:"0px", color:"red"}}>{errors.password.message}</p>
                 )}
               </div>
               <div className="forgottext">

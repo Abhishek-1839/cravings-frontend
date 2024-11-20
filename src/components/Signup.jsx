@@ -45,7 +45,7 @@ const Signup = () => {
                   placeholder="Enter your name"
                   style={{ borderRadius: "22px" }}
                 />
-                {errors.name && <p className="nameerror">{errors.name.message}</p>}
+                {errors.name && <p className="nameerror" style={{margin:"0px", color:"red"}}>{errors.name.message}</p>}
               </div>
 
               <div>
@@ -67,20 +67,23 @@ const Signup = () => {
                   style={{ borderRadius: "22px" }}
                 />
                 {errors.email && (
-                  <p className="emailerror">{errors.email.message}</p>
+                  <p className="emailerror" style={{margin:"0px", color:"red"}}>{errors.email.message}</p>
                 )}
               </div>
               <div>
                 <label htmlFor="phone" className="emailbox">Phone Number</label>
                 <input
                   type="text"
-                  id="name"
-                  {...register('name', { required: 'Name is required' })}
+                  id="phone"
+                  {...register('phone', { required: 'Phone number is required', pattern: {
+                    value: /^[0-9]{10}$/, // Validates a 10-digit phone number
+                    message: 'Phone number must be 10 digits',
+                  } })}
                   className="emailinput"
-                  placeholder="Enter your name"
+                  placeholder="Enter your phone number"
                   style={{ borderRadius: "22px" }}
                 />
-                {errors.phone && <p className="nameerror">{errors.phone.message}</p>}
+                {errors.phone && <p className="phoneerror" style={{margin:"0px", color:"red"}}>{errors.phone.message}</p>}
               </div>
               <div>
                 <label htmlFor="password" className="passwordbox">
@@ -101,7 +104,7 @@ const Signup = () => {
                   style={{ borderRadius: "22px" }}
                 />
                 {errors.password && (
-                  <p className="passworderror">{errors.password.message}</p>
+                  <p className="passworderror" style={{margin:"0px", color:"red"}}>{errors.password.message}</p>
                 )}
               </div>
               <button
