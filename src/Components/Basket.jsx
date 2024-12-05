@@ -11,13 +11,11 @@ import "./Basket.css";
 import { Link } from "react-router-dom";
 import scooter from "../images/scooter.png";
 import storeimg from "../images/store.png";
-import Loader from "./Loader";
 const Basket = () => {
   const dispatch = useDispatch();
   const { items, subtotal, totalToPay, status } = useSelector(
     (state) => state.cart
   );
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     console.log("Cart State:", { items, subtotal, totalToPay });
   }, [items]);
@@ -28,7 +26,7 @@ const Basket = () => {
     }
   }, [dispatch, status]);
 
-  if (status === "loading") return setLoading(false);
+  if (status === "loading") return <p>Loading...</p>;
 
   return (
     <>
@@ -45,7 +43,6 @@ const Basket = () => {
         </div>
         <button className="copybtn">Copy link</button>
       </div> */}
-       {loading && <Loader />}
       <CartShare />
       <div className="basket">
         <header className="basket-header">
