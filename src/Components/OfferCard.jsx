@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../data/api"; 
+import Loader from "./Loader";
 import "./OfferCard.css";
 
 const OfferCard = () => {
@@ -17,6 +18,9 @@ const OfferCard = () => {
                 setError("Failed to load offers. Please try again later.");
                 setLoading(false);
             }
+            finally {
+                setLoading(false); // Stop loading
+              }
         };
 
         fetchOfferCards();
@@ -31,6 +35,8 @@ const OfferCard = () => {
     }
 
     return (
+        <>
+         {loading && <Loader />}
         <div className="offers-cards">
             {cards.map((card, index) => (
                 <div className="offercard" key={index}>
@@ -52,7 +58,7 @@ const OfferCard = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </div></>
     );
 };
 

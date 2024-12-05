@@ -27,6 +27,7 @@ const Product = () => {
   const decodedRestaurantName = decodeURIComponent(restaurantName);
   const [isBasketVisible, setIsBasketVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
   // const selectedRestaurant = useSelector(
   //   (state) => state.restaurant.selectedRestaurant
   // );
