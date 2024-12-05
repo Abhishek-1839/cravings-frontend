@@ -9,11 +9,9 @@ import logo2 from "../images/LOGO-2.png";
 import Footeropy from "../Components/Footeropy";
 
 const Signup = () => {
-<<<<<<< HEAD
+
   const [loading, setLoading] = useState(false); // Loading state
-=======
-  const [loading, setLoading] = useState(false);
->>>>>>> 79f1918e08056d168c134e65166524cb7f4c56c4
+
   const {
     register,
     handleSubmit,
@@ -53,13 +51,9 @@ const Signup = () => {
       );
       // Optionally handle error (e.g., show an error message)
     }
-<<<<<<< HEAD
     finally {
       setLoading(false); // Stop loading
-=======
-    finally{
-      setLoading(false);
->>>>>>> 79f1918e08056d168c134e65166524cb7f4c56c4
+
     }
   };
   const handleSignin = () => {
