@@ -26,6 +26,11 @@ const Basket = () => {
     }
   }, [dispatch, status]);
 
+  const handleRemoveItem = (productId) => {
+    console.log("Dispatching removeItemFromCart for:", productId);
+    dispatch(removeItemFromCart(productId));
+};
+
   if (status === "loading") return <p>Loading...</p>;
 
   return (
@@ -80,7 +85,7 @@ const Basket = () => {
             <p>Your basket is empty.</p>
           )}
         </div> */}
-        <SharedCart items={items} />
+        <SharedCart items={items} onRemoveItem={handleRemoveItem}/>
         <div className="basket-summary">
           <p>
             <b>Sub Total: </b>

@@ -32,6 +32,7 @@ export const fetchCart = createAsyncThunk(
 export const removeItemFromCart = createAsyncThunk(
   "cart/removeItemFromCart",
   async (itemId, { dispatch }) => {
+    console.log("API call to remove item with ID:", itemId);
     await api.post("/removeitem", { productId: itemId });
     dispatch(fetchCart());
   }
