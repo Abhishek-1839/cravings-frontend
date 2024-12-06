@@ -32,7 +32,7 @@ const CartShare = () => {
             <button className="copybtn" onClick={handleShareCart}>
                 Copy link
             </button>
-            {sharedLink && <p className="shared-link">{sharedLink}</p>}
+            {/* {sharedLink && <p className="shared-link">{sharedLink}</p>} */}
         </div>
     );
 };
